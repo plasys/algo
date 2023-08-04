@@ -32,15 +32,20 @@ def m1(array):
 
     else:
       # 'O'인 인덱스들 검사
-      for j in arr:
+      l1 = []
+      for j in arr:        
         # 이전 'O'와 이어지면 그대로 두기
         if a[j] == 'O':
           pass
         # 'X'면 해당 인덱스 삭제
         else:
-          arr.remove(j)
+          l1.append(j)
+          # arr.remove(j)
 
-      # 검사 후 비어있으면 다른 'O'의 인덱스를 찾아 채워넣기
+      for k in l1:
+        arr.remove(k)
+        
+      # 검사 후 비어있으면 다른 'O'의 인덱스들을 찾아 채워넣기
       if len(arr) == 0:
         for i in range(len(a)):
           # 'O' 이면 인덱스를 저장
@@ -49,7 +54,7 @@ def m1(array):
 
         # 방을 교체했으므로 횟수 추가
         result += 1
-
+  
   return result
 
 print(m1(array))
