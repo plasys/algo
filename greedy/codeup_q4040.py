@@ -37,11 +37,11 @@ def m1(array):
         # 이전 'O'와 이어지면 그대로 두기
         if a[j] == 'O':
           pass
-        # 'X'면 해당 인덱스 삭제
+        # 'X'면 해당 인덱스를 저장해두기
         else:
           l1.append(j)
-          # arr.remove(j)
 
+      # 저장해뒀던 인덱스를 삭제
       for k in l1:
         arr.remove(k)
         
