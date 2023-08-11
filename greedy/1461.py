@@ -17,11 +17,11 @@ for i in li:
 d = []
 minusList.sort()
 
-# 몫 만큼 반복하여 묷음중 가장 큰 값을 저장
+# 몫 만큼 반복하여 묶음중 가장 큰 값을 저장
 for i in range(len(minusList) // m):
   d.append(-minusList[m * i])
   
-# 나머지가 있으면 나머지 묷음중 가장 절대값이 큰 값을 더해준다.
+# 나머지가 있으면 나머지 묶음중 가장 절대값이 큰 값을 더해준다.
 if len(minusList) % m != 0:
   d.append(-minusList[(len(minusList) // m) * m])
 
