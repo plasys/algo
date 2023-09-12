@@ -1,9 +1,8 @@
-# 12312312312313122131
-
 from collections import deque
+import sys
 
 # N, M을 공백으로 구분하여 입력받기
-n, m = map(int, input().split())
+n, m = map(int, sys.stdin.readline().rstrip().split())
 
 # 2차원 리스트의 맵 정보 입력받기
 graph = []
